@@ -2,6 +2,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        ConexionBD.crearTablas();
+
         Ejercicio ejercicio1 = new Ejercicio(
                 1,
                 "Press de banca",
@@ -46,6 +48,9 @@ public class Main {
                 "2002-05-10"
         );
 
+        SocioDAO.guardarSocio(socio);
+        SocioDAO.consultarSocio(1);
+
         entrenador.asignarRutina(socio, rutina);
 
         Membresia membresia = new Membresia(
@@ -57,6 +62,8 @@ public class Main {
         );
 
         socio.asignarMembresia(membresia);
+
+        MembresiaDAO.guardarMembresia(membresia, socio);
 
         System.out.println("===== SISTEMA DE GIMNASIO =====");
 
