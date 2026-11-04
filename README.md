@@ -1,10 +1,21 @@
 # Sistema de Gestión de Gimnasio
 
-Proyecto desarrollado en Java como implementación del diseño UML realizado previamente.
+Proyecto desarrollado en Java como implementación de un sistema de gestión para un gimnasio.
 
-## Descripción
+## Funcionalidades
 
-El sistema permite gestionar información básica de un gimnasio, incluyendo socios, entrenadores, rutinas, ejercicios y membresías.
+El sistema permite:
+
+- Registrar socios.
+- Crear entrenadores.
+- Crear rutinas.
+- Agregar ejercicios a las rutinas.
+- Asignar rutinas a los socios.
+- Crear y asignar membresías.
+- Consultar membresías.
+- Renovar y cancelar membresías.
+- Guardar socios y membresías en una base de datos H2.
+- Consultar información almacenada en la base de datos.
 
 ## Clases principales
 
@@ -17,45 +28,58 @@ El sistema permite gestionar información básica de un gimnasio, incluyendo soc
 - Administrador
 - Recepcionista
 
-## Funcionalidades
+## Persistencia
 
-- Crear socios.
-- Crear entrenadores.
-- Crear rutinas.
-- Agregar ejercicios a una rutina.
-- Asignar rutinas a socios.
-- Asignar membresías.
-- Consultar rutinas y membresías.
-- Renovar y cancelar membresías.
-- Aplicar herencia entre Empleado, Administrador y Recepcionista.
+El proyecto utiliza H2 Database para almacenar información.
 
-## Pruebas unitarias
+Las clases principales relacionadas con la persistencia son:
 
-Se implementaron pruebas con JUnit para:
+- ConexionBD
+- SocioDAO
+- MembresiaDAO
 
-- Membresia
-- Rutina
-- Socio
+## Pruebas
 
-Las pruebas verifican funciones como:
+Se utilizaron pruebas unitarias con JUnit.
 
-- Cancelar y renovar membresías.
-- Agregar y eliminar ejercicios.
-- Asignar rutinas y membresías a socios.
+Se realizaron pruebas sobre:
 
-## JavaDoc
+- Socios.
+- Rutinas.
+- Membresías.
+- Persistencia en base de datos.
 
-La documentación del proyecto fue generada utilizando JavaDoc y se encuentra en la carpeta:
+## Documentación
 
-docs
+El proyecto incluye:
 
-El archivo principal es:
+- JavaDoc.
+- Manual técnico.
+- Manual de usuario.
 
-docs/index.html
+Los manuales se encuentran en la carpeta:
+
+`documentacion`
+
+La documentación JavaDoc se encuentra en:
+
+`docs/index.html`
 
 ## Tecnologías utilizadas
 
 - Java 21
+- H2 Database
 - JUnit Jupiter
-- Visual Studio Code
 - JavaDoc
+- Visual Studio Code
+- Git
+- GitHub
+
+## Estructura principal
+
+- `src`: código fuente.
+- `test`: pruebas unitarias.
+- `lib`: librerías.
+- `docs`: JavaDoc.
+- `documentacion`: manual técnico y manual de usuario.
+- `capturas`: evidencias de funcionamiento.
